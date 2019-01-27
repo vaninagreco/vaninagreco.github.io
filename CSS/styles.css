@@ -13,10 +13,12 @@
     src: url("../Fonts/marker.ttf");
 }
 
+
+
 h1,
 h2,
 h3 {
-    font-family: Prototype, Consolas, "Courier New", Courier, monospace;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
 }
