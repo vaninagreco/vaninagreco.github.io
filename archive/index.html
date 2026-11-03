@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanina Greco — Senior Product Designer</title>
+<meta name="description" content="Vanina Greco, Senior Product Designer. UX/UI design for complex, data-dense SaaS products across fintech, compliance, IoT and AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8FB;
+    --ink: #3F2D3F;        /* Dark Violet — titles */
+    --ink-soft: #6E6270;
+    --link: #9888A5;       /* Dark Lilac — links, secondary accents */
+    --accent-soft: #CFB3E5; /* Lavender — decoration */
+    --accent-soft-bg: #F3ECF9;
+    --rule: #E7DCEF;
+    --card-bg: #FFFFFF;
+    --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,251,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--rule);
+  }
+  header.nav .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px; padding-bottom: 14px;
+  }
+  .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); }
+  .nav-links { display: flex; gap: 22px; font-size: 0.92rem; }
+  .nav-links a { text-decoration: none; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--ink); }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+
+  /* Cover banner + overlapping avatar, Notion-style */
+  .cover {
+    height: 240px;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-soft), #E9DCF2 60%, var(--accent-soft-bg));
+    background-image: url('Images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero { padding-top: 0; border-bottom: 1px solid var(--rule); }
+  .hero-inner { position: relative; padding-bottom: 32px; }
+  .avatar {
+    width: 128px; height: 128px;
+    border-radius: 50%;
+    border: 4px solid var(--bg);
+    background: var(--accent-soft-bg) url('Images/headshot.jpg') center/cover no-repeat;
+    position: relative;
+    top: -56px;
+    margin-bottom: -40px;
+    box-shadow: 0 2px 10px rgba(63,45,63,0.12);
+  }
+  .hero-text { padding-top: 8px; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--ink);
+    font-size: clamp(2rem, 5vw, 2.65rem);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    max-width: 14ch;
+  }
+  .hero .role {
+    font-size: 1.05rem;
+    color: var(--link);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .hero p { max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
+  .hero-meta {
+    margin-top: 28px;
+    display: flex; flex-wrap: wrap; gap: 10px 28px;
+    font-size: 0.88rem; color: var(--ink-soft);
+  }
+  .hero-meta strong { color: var(--ink); font-weight: 600; }
+
+  h2.section-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 28px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 40px;
+  }
+  .skill-group h3 {
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--ink);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .skill-group p {
+    margin: 0; color: var(--ink-soft); font-size: 0.95rem;
+  }
+
+  .projects { display: flex; flex-direction: column; gap: 18px; }
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent-soft);
+    border-radius: 6px;
+    padding: 26px 28px;
+  }
+  .project-card .tag {
+    font-size: 0.78rem; color: var(--link); margin-bottom: 6px; font-weight: 600;
+  }
+  .project-card h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 1.18rem;
+    margin: 0 0 8px;
+  }
+  .project-card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+  .project-card .result {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .portfolio-note {
+    margin-top: 26px;
+    padding: 20px 24px;
+    border-left: 3px solid var(--accent-soft);
+    background: var(--accent-soft-bg);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .portfolio-note a { font-weight: 600; }
+
+  .about p { color: var(--ink-soft); max-width: 62ch; font-size: 0.98rem; }
+
+  .contact h2.section-title { margin-bottom: 14px; }
+  .contact p.lead { color: var(--ink-soft); margin-bottom: 24px; max-width: 50ch; }
+  .contact-links { display: flex; flex-direction: column; gap: 10px; }
+  .contact-links a {
+    font-size: 1.02rem;
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .contact-links a span.label { color: var(--ink-soft); font-size: 0.85rem; }
+  .contact-links a:hover { color: var(--link); }
+
+  footer {
+    padding: 32px 0 48px;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 560px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    section { padding: 44px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="nav-name">Vanina Greco</div>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="cover"></div>
+  <div class="wrap hero-inner">
+    <div class="avatar"></div>
+    <div class="hero-text">
+      <div class="role">Senior Product Designer</div>
+      <h1>Designing for complexity, without losing usability.</h1>
+      <p>9+ years in design and 15+ years in tech, with a background in marketing and front-end coding. I've designed across 15+ SaaS products — financial compliance, IoT, and AI-powered agents among them — grounding decisions in user research and data rather than intuition alone.</p>
+      <div class="hero-meta">
+        <div><strong>Based in</strong> Argentina</div>
+        <div><strong>Languages</strong> English (C2), French (bilingual)</div>
+        <div><strong>Open to</strong> remote, senior/lead product design roles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2 class="section-title">Selected work</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <div class="tag">UGC Platform · AI Agent Design</div>
+        <h3>An AI agent that gets things done</h3>
+        <p>Designed a conversational AI agent that answers support questions and completes routine actions inside a creator-content platform — from user flows through beta testing.</p>
+        <span class="result">65% reduction in brief workflow time, reported over 90 days</span>
+      </div>
+
+      <div class="project-card">
+        <div class="tag">IoT / Smart Water Platform · Charting</div>
+        <h3>Replacing Power BI with an in-house charting feature</h3>
+        <p>Led research, design and usability testing for a custom multi-sensor charting feature for a global water-solutions company, built to cut licensing costs while matching Power BI's analytical depth.</p>
+        <span class="result">Shipped on tight agile timelines, issues resolved pre-handoff</span>
+      </div>
+
+      <div class="project-card">
+        <div class="tag">Financial Compliance Platform · Design System</div>
+        <h3>A single source of truth across 15+ applications</h3>
+        <p>Led the creation of a unified design system for a SEC-compliance document platform used by law firms and corporations — from component audit through a shared library and documentation site.</p>
+        <span class="result">Reduced inconsistency and design-to-dev handoff friction</span>
+      </div>
+
+    </div>
+
+    <div class="portfolio-note">
+      These are short summaries — some project details are under NDA. If you'd like the full case studies with process, research and data, reach out at <a href="mailto:vanina.greco@gmail.com">vanina.greco@gmail.com</a> and I'll share access.
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Research & Strategy</h3>
+        <p>User interviews, usability testing, benchmarking, affinity mapping, product strategy & prioritization</p>
+      </div>
+      <div class="skill-group">
+        <h3>UI & Systems</h3>
+        <p>High-fidelity design, design systems, interactive prototyping, accessible visual design</p>
+      </div>
+      <div class="skill-group">
+        <h3>AI-Integrated Design</h3>
+        <p>Prompt & context engineering, custom agents and skills, MCP integrations, AI-assisted prototyping</p>
+      </div>
+      <div class="skill-group">
+        <h3>Front-End</h3>
+        <p>HTML5, CSS3/Sass, basic JavaScript, React &amp; Angular fluency for developer collaboration</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap about" style="margin-top:48px;">
+    <h2 class="section-title">About</h2>
+    <p>I started in marketing before moving into design in 2016, which keeps me grounded in business goals alongside user needs. Outside of work, I read a lot of science fiction, do a bit of ceramics and drawing, and share my time with two cats.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2 class="section-title">Get in touch</h2>
+    <p class="lead">Open to senior and lead product design roles — reach out about opportunities or the full portfolio.</p>
+    <div class="contact-links">
+      <a href="mailto:vanina.greco@gmail.com">vanina.greco@gmail.com <span class="label">Email</span></a>
+      <a href="https://ar.linkedin.com/in/vanina-greco" target="_blank" rel="noopener">LinkedIn <span class="label">Profile</span></a>
+      <a href="https://www.behance.net/vaninagreco" target="_blank" rel="noopener">Behance <span class="label">Early work</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Vanina Greco</div>
+</footer>
+
+</body>
+</html>
