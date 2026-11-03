@@ -34,8 +34,7 @@ Then open <http://localhost:8000>.
 | `cover-ai-agent` (featured card) | 1400 × 746 | about 15:8 |
 | `hero-ai-agent` (case study hero) | 1600 × 853 | 15:8 |
 | `sketch-hero` | 800 × 602 or larger | 4:3 |
-| `hobby-journal` | 1200 × 845 | 1.42:1 |
-| `hobby-ceramic`, `hobby-drawing` | 800 × 800 | 1:1 |
+| `hobby-ceramic`, `hobby-journal`, `hobby-drawing` | 800 × 800 | 1:1 |
 
 Use lowercase file names with hyphens. WebP, quality 80–85, under about 200 KB each. Strip EXIF from photos before publishing.
 

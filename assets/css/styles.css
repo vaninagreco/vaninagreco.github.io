@@ -126,10 +126,12 @@ h3{font-size:20px;font-weight:500;line-height:1.3}
 .cat{display:block;width:96px;height:auto}
 .subhead{margin-top:48px;font-size:14px;font-weight:500}
 .tags.industries{margin-top:16px}
-.handmade{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:end;margin-top:48px}
+.subhead+.handmade{margin-top:16px}
+.handmade{display:flex;gap:12px;margin:48px -24px 0;padding:0 24px 8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;-webkit-overflow-scrolling:touch}
+.handmade:focus-visible{outline-offset:-2px}
+.handmade img{flex:0 0 72%;min-width:0;scroll-snap-align:start}
 .handmade img{display:block;width:100%;height:auto;padding:0;object-fit:cover;border-radius:var(--r-card);border:1px solid var(--border);background:var(--placeholder)}
-.h-journal{grid-column:1/-1;order:-1;aspect-ratio:1.42/1}
-.h-draw,.h-ceramic{aspect-ratio:1/1}
+.handmade img{aspect-ratio:1/1}
 
 /* closing */
 .cta-card{padding:32px 24px;border:1px solid var(--border);border-radius:var(--r-card);background:var(--surface)}
@@ -183,8 +185,8 @@ h3{font-size:20px;font-weight:500;line-height:1.3}
   .num{font-size:48px}
   .about-top{grid-template-columns:160px 1fr}
   .cta-card{padding:48px}
-  .handmade{grid-template-columns:repeat(3,1fr);gap:24px}
-  .h-journal{grid-column:auto;order:0}
+  .handmade{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-left:0;margin-right:0;padding:0;overflow:visible}
+  .handmade img{flex:none}
   h3{font-size:22px}
   .meta{grid-template-columns:repeat(4,1fr)}
   .prose p,.prose ul{font-size:18px}
