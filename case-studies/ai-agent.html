@@ -116,6 +116,10 @@
 <p>I conducted extensive research on relevant subjects such as AI trust, AI UX patterns, when to use automation, and how agents should fit within an existing product.</p>
 <h3>Client feedback analysis</h3>
 <p>I analyzed recurring client needs from Gong calls using Dust AI to identify frequent tasks we could automate.</p>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-actions.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Two research boards: on the left, articles, resources and benchmarks of automation tools; on the right, sticky notes grouping the actions to automate from client feedback"><img src="../assets/img/ai-agent-actions.webp" alt="Two research boards: on the left, articles, resources and benchmarks of automation tools; on the right, sticky notes grouping the actions to automate from client feedback" width="2000" height="1062" loading="lazy"></a>
+<figcaption>Desk research (articles, resources and automation benchmarks) next to the actions to automate that I mapped from client feedback</figcaption>
+</figure>
 </section>
 
 <section id="define">
@@ -131,21 +135,15 @@
 <li>Mass-message creators</li>
 <li>Reimburse creators</li>
 </ul>
-<figure class="figure">
-<!-- IMG: replace this box with <img src="../assets/img/actions.webp" alt="..." width="1360" height="850" loading="lazy"> -->
-<div class="box" role="img" aria-label="Actions the agent can perform">Actions the agent can perform (image coming)</div>
-<figcaption>The actions we prioritized for the agent</figcaption>
-</figure>
 </section>
 
 <section id="design">
 <h2>3. Design</h2>
 <h3>User flows</h3>
 <p>I revised and refined the user flows with the internal team (CEO, product director, and tech leads) to align on agent behavior, edge cases, feature goals, expected AI behavior, and technical constraints.</p>
-<figure class="figure">
-<!-- IMG: replace this box with <img src="../assets/img/userflows.webp" alt="..." width="1360" height="850" loading="lazy"> -->
-<div class="box" role="img" aria-label="User flows">User flows (image coming)</div>
-<figcaption>User flows for the agent tasks</figcaption>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-user-flow.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Flow diagram for the Add Creators to Maybe task, with the agent conversation screens for each step"><img src="../assets/img/ai-agent-user-flow.webp" alt="Flow diagram for the Add Creators to Maybe task, with the agent conversation screens for each step" width="2400" height="1169" loading="lazy"></a>
+<figcaption>User flow for Add Creators to Maybe, shown as an example of the flows I designed for each task</figcaption>
 </figure>
 <h3>Mockups and AI prototypes</h3>
 <p>I turned all key tasks into high-fidelity designs and interactive prototypes with Figma Make and Claude Design for further internal validation and refinement.</p>
@@ -167,9 +165,8 @@
 <li>Do the agent's results match their expectations?</li>
 </ul>
 <figure class="figure">
-<!-- IMG: replace this box with <img src="../assets/img/test.webp" alt="..." width="1360" height="850" loading="lazy"> -->
-<div class="box" role="img" aria-label="Test setup">Test setup (image coming)</div>
-<figcaption>How the usability test was run</figcaption>
+<img src="../assets/img/ai-agent-test.webp" alt="The agent panel open on a wireframe of a campaign page, showing the agent confirming it marked 7 creators as Maybe" width="1360" height="850" loading="lazy">
+<figcaption>The prototype used in testing: the agent open on a campaign page, completing the Add Creators to Maybe task</figcaption>
 </figure>
 
 <h3>Testing results and key findings</h3>
@@ -180,9 +177,8 @@
 <p>There was not enough feedback to distinguish between <em>working</em>, <em>finished</em>, and <em>waiting</em> states.</p>
 <p><strong>Design response:</strong> I added clearer processing feedback and an "Analyzing" state to communicate progress.</p>
 <figure class="figure">
-<!-- IMG: replace this box with <img src="../assets/img/response-times.webp" alt="..." width="1360" height="850" loading="lazy"> -->
-<div class="box" role="img" aria-label="Processing feedback and the Analyzing state">Processing feedback and the Analyzing state (image coming)</div>
-<figcaption>Clearer processing feedback while the agent works</figcaption>
+<img src="../assets/img/ai-agent-response-times.webp" alt="Two agent panels compared: a quick Analyzing state for responses under 10 seconds, and a longer message with a dashed highlight for waits over 10 seconds" width="1360" height="850" loading="lazy">
+<figcaption>Processing feedback by response time: an “Analyzing…” state, plus a longer message when the wait passes 10 seconds</figcaption>
 </figure>
 
 <h4>2. Users wanted immediate access to the agent's results</h4>
