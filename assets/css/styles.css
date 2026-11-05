@@ -53,6 +53,7 @@ main{display:flex;flex-direction:column}
 .stats{order:2}
 .cases-head{order:3}
 .featured-block{order:4}
+.featured-block .wrap{display:flex;flex-direction:column;gap:24px}
 .trio-block{order:5}
 .about{order:6}
 .cta{order:7}
