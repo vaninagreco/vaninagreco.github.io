@@ -47,12 +47,12 @@ img{max-width:100%}
 .btn-secondary{background:transparent;color:var(--accent);border-color:var(--accent)}
 .btn-secondary:hover{color:var(--accent-hover);border-color:var(--accent-hover);background:var(--tag)}
 
-/* page flow: on mobile the first case study sits right after the hero */
+/* page flow: hero, stats, then the case studies (same order on every screen size) */
 main{display:flex;flex-direction:column}
 .hero{order:1}
-.cases-head{order:2}
-.featured-block{order:3}
-.stats{order:4}
+.stats{order:2}
+.cases-head{order:3}
+.featured-block{order:4}
 .trio-block{order:5}
 .about{order:6}
 .cta{order:7}
@@ -225,10 +225,7 @@ h3{font-size:20px;font-weight:500;line-height:1.3}
   .hero-grid{grid-template-columns:repeat(12,1fr);gap:24px;align-items:center}
   .hero-copy{grid-column:1/8}
   .hero-art{grid-column:8/13}
-  .stats{order:2;padding-top:24px}
-  .cases-head{order:3}
-  .featured-block{order:4}
-  .trio-block{order:5}
+  .stats{padding-top:24px}
   .section-pad{padding-top:72px}
   .cases-head.section-pad{padding-top:56px}
   .featured{flex-direction:row}
