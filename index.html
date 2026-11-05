@@ -1,301 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vanina Greco — Senior Product Designer</title>
-<meta name="description" content="Vanina Greco, Senior Product Designer. UX/UI design for complex, data-dense SaaS products across fintech, compliance, IoT and AI.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #FAF8FB;
-    --ink: #3F2D3F;        /* Dark Violet — titles */
-    --ink-soft: #6E6270;
-    --link: #9888A5;       /* Dark Lilac — links, secondary accents */
-    --accent-soft: #CFB3E5; /* Lavender — decoration */
-    --accent-soft-bg: #F3ECF9;
-    --rule: #E7DCEF;
-    --card-bg: #FFFFFF;
-    --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--link); }
-
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
-
-  header.nav {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(250,248,251,0.92);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--rule);
-  }
-  header.nav .wrap {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 14px; padding-bottom: 14px;
-  }
-  .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); }
-  .nav-links { display: flex; gap: 22px; font-size: 0.92rem; }
-  .nav-links a { text-decoration: none; color: var(--ink-soft); }
-  .nav-links a:hover { color: var(--ink); }
-
-  section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
-  section:last-of-type { border-bottom: none; }
-
-  /* Cover banner + overlapping avatar, Notion-style */
-  .cover {
-    height: 240px;
-    width: 100%;
-    background: linear-gradient(135deg, var(--accent-soft), #E9DCF2 60%, var(--accent-soft-bg));
-    background-image: url('Images/cover.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  .hero { padding-top: 0; border-bottom: 1px solid var(--rule); }
-  .hero-inner { position: relative; padding-bottom: 32px; }
-  .avatar {
-    width: 128px; height: 128px;
-    border-radius: 50%;
-    border: 4px solid var(--bg);
-    background: var(--accent-soft-bg) url('Images/headshot.jpg') center/cover no-repeat;
-    position: relative;
-    top: -56px;
-    margin-bottom: -40px;
-    box-shadow: 0 2px 10px rgba(63,45,63,0.12);
-  }
-  .hero-text { padding-top: 8px; }
-  .hero h1 {
-    font-family: var(--serif);
-    font-weight: 500;
-    color: var(--ink);
-    font-size: clamp(2rem, 5vw, 2.65rem);
-    line-height: 1.15;
-    margin: 0 0 18px;
-    max-width: 14ch;
-  }
-  .hero .role {
-    font-size: 1.05rem;
-    color: var(--link);
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  .hero p { max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
-  .hero-meta {
-    margin-top: 28px;
-    display: flex; flex-wrap: wrap; gap: 10px 28px;
-    font-size: 0.88rem; color: var(--ink-soft);
-  }
-  .hero-meta strong { color: var(--ink); font-weight: 600; }
-
-  h2.section-title {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin: 0 0 28px;
-  }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px 40px;
-  }
-  .skill-group h3 {
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    color: var(--ink);
-    margin: 0 0 8px;
-    font-weight: 600;
-  }
-  .skill-group p {
-    margin: 0; color: var(--ink-soft); font-size: 0.95rem;
-  }
-
-  .projects { display: flex; flex-direction: column; gap: 18px; }
-  .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--accent-soft);
-    border-radius: 6px;
-    padding: 26px 28px;
-  }
-  .project-card .tag {
-    font-size: 0.78rem; color: var(--link); margin-bottom: 6px; font-weight: 600;
-  }
-  .project-card h3 {
-    font-family: var(--serif);
-    font-weight: 600;
-    color: var(--ink);
-    font-size: 1.18rem;
-    margin: 0 0 8px;
-  }
-  .project-card p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
-  .project-card .result {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 0.88rem;
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .portfolio-note {
-    margin-top: 26px;
-    padding: 20px 24px;
-    border-left: 3px solid var(--accent-soft);
-    background: var(--accent-soft-bg);
-    border-radius: 6px;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-  }
-  .portfolio-note a { font-weight: 600; }
-
-  .about p { color: var(--ink-soft); max-width: 62ch; font-size: 0.98rem; }
-
-  .contact h2.section-title { margin-bottom: 14px; }
-  .contact p.lead { color: var(--ink-soft); margin-bottom: 24px; max-width: 50ch; }
-  .contact-links { display: flex; flex-direction: column; gap: 10px; }
-  .contact-links a {
-    font-size: 1.02rem;
-    text-decoration: none;
-    color: var(--ink);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 10px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .contact-links a span.label { color: var(--ink-soft); font-size: 0.85rem; }
-  .contact-links a:hover { color: var(--link); }
-
-  footer {
-    padding: 32px 0 48px;
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-  }
-
-  @media (max-width: 560px) {
-    .skills-grid { grid-template-columns: 1fr; }
-    section { padding: 44px 0; }
-  }
-</style>
+<title>Vanina Greco, Senior product designer</title>
+<meta name="description" content="Senior product designer in Argentina, working remotely. I design complex, data-dense products across fintech, compliance, IoT and AI, balancing business and user goals.">
+<meta name="theme-color" content="#F4F4F7">
+<link rel="canonical" href="https://vaninagreco.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vanina Greco">
+<meta property="og:title" content="Vanina Greco, Senior product designer">
+<meta property="og:description" content="I design complex, data-dense products across fintech, compliance, IoT and AI. See my case studies.">
+<meta property="og:url" content="https://vaninagreco.github.io/">
+<meta property="og:image" content="https://vaninagreco.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vanina Greco, Senior product designer, next to a hand-drawn UX sketch">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/poppins-300-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-400-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Vanina Greco","jobTitle":"Senior Product Designer","url":"https://vaninagreco.github.io/","sameAs":["https://www.linkedin.com/in/vanina-greco/"],"address":{"@type":"PostalAddress","addressCountry":"AR"}}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="nav">
-  <div class="wrap">
-    <div class="nav-name">Vanina Greco</div>
-    <nav class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="wrap">
+<a class="brand" href="#top">Vanina Greco</a>
+<nav class="nav-links" aria-label="Primary">
+<a class="nav-link" href="#work" aria-current="location">Work<svg class="stroke" viewBox="0 0 120 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="stroke-fill" d="M2 9 C22 4 52 7 82 5 C101 4 113 6 118 5 C119 8 118 12 115 13 C90 14 52 11 20 13 C10 13 4 12 2 10 Z"></path></svg></a>
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#contact">Contact</a>
+</nav>
+<a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+</div>
 </header>
 
-<section class="hero">
-  <div class="cover"></div>
-  <div class="wrap hero-inner">
-    <div class="avatar"></div>
-    <div class="hero-text">
-      <div class="role">Senior Product Designer</div>
-      <h1>Designing for complexity, without losing usability.</h1>
-      <p>9+ years in design and 15+ years in tech, with a background in marketing and front-end coding. I've designed across 15+ SaaS products — financial compliance, IoT, and AI-powered agents among them — grounding decisions in user research and data rather than intuition alone.</p>
-      <div class="hero-meta">
-        <div><strong>Based in</strong> Argentina</div>
-        <div><strong>Languages</strong> English (C2), French (bilingual)</div>
-        <div><strong>Open to</strong> remote, senior/lead product design roles</div>
-      </div>
-    </div>
-  </div>
+<main id="main">
+
+<section class="hero" id="top">
+<div class="wrap">
+<div class="hero-grid">
+<div class="hero-copy">
+<p class="status"><span class="dot" aria-hidden="true"></span>Senior Product Designer · Argentina · Remote</p>
+<h1><span>Designing for complexity, without losing</span> <span class="mark"><span>usability</span><svg class="stroke" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="stroke-fill" d="M3 36 C8 22 34 16 84 18 C140 12 214 18 294 9 C299 20 298 40 291 51 C236 56 160 49 92 55 C48 53 14 57 5 50 C1 46 1 41 3 36 Z"></path></svg></span><span>.</span></h1>
+<p class="sub">Well-rounded designer with a rich marketing and coding background, I turn complex challenges into products that meet that sweet spot between business and user goals.</p>
+<div class="actions">
+<a class="btn btn-primary" href="#work">See case studies</a>
+<a class="btn btn-secondary" href="#contact">Get in touch</a>
+</div>
+</div>
+<figure class="hero-art">
+<div class="sketch">
+<div class="panel"></div>
+<img class="photo" src="assets/img/sketch-hero.webp" alt="Hand-drawn notebook sketch of a food-app onboarding flow: wireframes on dotted paper with sticky notes" width="800" height="602" fetchpriority="high">
+<p class="sticker">Open to remote senior / lead roles</p>
+<div class="hi"><img src="assets/img/headshot.webp" alt="Vanina Greco" width="72" height="72"><span>Hi, I'm Vanina</span></div>
+</div>
+<figcaption class="caption">Real sketch from a personal food-app project</figcaption>
+</figure>
+</div>
+</div>
 </section>
 
-<section id="work">
-  <div class="wrap">
-    <h2 class="section-title">Selected work</h2>
-    <div class="projects">
-
-      <div class="project-card">
-        <div class="tag">UGC Platform · AI Agent Design</div>
-        <h3>An AI agent that gets things done</h3>
-        <p>Designed a conversational AI agent that answers support questions and completes routine actions inside a creator-content platform — from user flows through beta testing.</p>
-        <span class="result">65% reduction in brief workflow time, reported over 90 days</span>
-      </div>
-
-      <div class="project-card">
-        <div class="tag">IoT / Smart Water Platform · Charting</div>
-        <h3>Replacing Power BI with an in-house charting feature</h3>
-        <p>Led research, design and usability testing for a custom multi-sensor charting feature for a global water-solutions company, built to cut licensing costs while matching Power BI's analytical depth.</p>
-        <span class="result">Shipped on tight agile timelines, issues resolved pre-handoff</span>
-      </div>
-
-      <div class="project-card">
-        <div class="tag">Financial Compliance Platform · Design System</div>
-        <h3>A single source of truth across 15+ applications</h3>
-        <p>Led the creation of a unified design system for a SEC-compliance document platform used by law firms and corporations — from component audit through a shared library and documentation site.</p>
-        <span class="result">Reduced inconsistency and design-to-dev handoff friction</span>
-      </div>
-
-    </div>
-
-    <div class="portfolio-note">
-      These are short summaries — some project details are under NDA. If you'd like the full case studies with process, research and data, reach out at <a href="mailto:vanina.greco@gmail.com">vanina.greco@gmail.com</a> and I'll share access.
-    </div>
-  </div>
+<section class="stats" aria-label="Highlights">
+<div class="wrap">
+<ul class="strip">
+<li><span class="num">10+</span><span class="lbl">years in design</span></li>
+<li><span class="num">15+</span><span class="lbl">years in tech</span></li>
+<li><span class="num">5+</span><span class="lbl">years of front-end coding</span></li>
+<li><span class="num">9</span><span class="lbl">industries</span></li>
+</ul>
+</div>
 </section>
 
-<section id="about">
-  <div class="wrap">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Research & Strategy</h3>
-        <p>User interviews, usability testing, benchmarking, affinity mapping, product strategy & prioritization</p>
-      </div>
-      <div class="skill-group">
-        <h3>UI & Systems</h3>
-        <p>High-fidelity design, design systems, interactive prototyping, accessible visual design</p>
-      </div>
-      <div class="skill-group">
-        <h3>AI-Integrated Design</h3>
-        <p>Prompt & context engineering, custom agents and skills, MCP integrations, AI-assisted prototyping</p>
-      </div>
-      <div class="skill-group">
-        <h3>Front-End</h3>
-        <p>HTML5, CSS3/Sass, basic JavaScript, React &amp; Angular fluency for developer collaboration</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap about" style="margin-top:48px;">
-    <h2 class="section-title">About</h2>
-    <p>I started in marketing before moving into design in 2016, which keeps me grounded in business goals alongside user needs. Outside of work, I read a lot of science fiction, do a bit of ceramics and drawing, and share my time with two cats.</p>
-  </div>
+<section class="cases-head section-pad" id="work">
+<div class="wrap">
+<span class="label">Selected work<svg class="stroke" viewBox="0 0 160 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="stroke-fill" d="M2 21 C5 9 32 6 72 9 C112 5 142 9 158 6 C159 17 157 29 154 35 C120 38 82 33 42 37 C22 38 8 36 3 32 C1 28 1 25 2 21 Z"></path></svg></span>
+<h2>Case Studies</h2>
+</div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2 class="section-title">Get in touch</h2>
-    <p class="lead">Open to senior and lead product design roles — reach out about opportunities or the full portfolio.</p>
-    <div class="contact-links">
-      <a href="mailto:vanina.greco@gmail.com">vanina.greco@gmail.com <span class="label">Email</span></a>
-      <a href="https://ar.linkedin.com/in/vanina-greco" target="_blank" rel="noopener">LinkedIn <span class="label">Profile</span></a>
-      <a href="https://www.behance.net/vaninagreco" target="_blank" rel="noopener">Behance <span class="label">Early work</span></a>
-    </div>
-  </div>
+<section class="featured-block block" aria-label="Featured case study">
+<div class="wrap">
+<article class="card featured">
+<div class="cover"><img src="assets/img/cover-ai-agent.webp" alt="Cohley AI agent: a conversational assistant panel open beside a campaign page" width="1400" height="746"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">AI</li><li class="tag">Research</li><li class="tag">Web</li></ul>
+<h3>Designing an AI Agent That Gets Things Done</h3>
+<p class="ctx">UX/UI design for an influencer and UGC content platform.</p>
+<div class="metrics">
+<div class="metric"><span class="n">100%</span><span class="l">task completion in testing</span></div>
+<div class="metric"><span class="n">65%</span><span class="l">time gain reported by clients</span></div>
+</div>
+<a class="more" href="case-studies/ai-agent.html">Read case study <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
 </section>
 
-<footer>
-  <div class="wrap">© 2026 Vanina Greco</div>
+<section class="trio-block block" aria-label="More case studies">
+<div class="wrap">
+<div class="trio">
+<article class="card card--soon">
+<div class="cover"><img src="assets/img/cover-esg.webp" alt="ESG search interface with a heatmap overlay on a dark starry background" width="1200" height="750" loading="lazy"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">Fintech</li><li class="tag">Research</li><li class="tag">Web</li></ul>
+<h3>Launching an ESG App That Became a Top Performer</h3>
+<p class="ctx">Research-led launch that became the best-selling app.</p>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+<article class="card card--soon">
+<div class="cover"><img src="assets/img/cover-charting.webp" alt="Analytics charting screen on a laptop against a pale blue water background" width="1200" height="750" loading="lazy"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">Research</li><li class="tag">Web</li><li class="tag">IoT</li></ul>
+<h3>Redesigning Charts to Cut Licensing Costs</h3>
+<p class="ctx">Fixed three major usability issues before dev handoff.</p>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+<article class="card card--soon">
+<div class="cover"><img src="assets/img/cover-european-account.webp" alt="Three smart home app screens in light and dark themes" width="1200" height="750" loading="lazy"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">Mobile</li><li class="tag">UI design</li><li class="tag">IoT</li></ul>
+<h3>Securing a New European Account With High-Impact Designs</h3>
+<p class="ctx">High-impact designs that helped the team win the account.</p>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+</div>
+<div class="trio duo">
+<article class="card card--soon">
+<div class="cover"><img src="assets/img/cover-smart-home.webp" alt="Tilted phones showing a thermostat app over a blue water texture" width="1200" height="750" loading="lazy"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">Mobile</li><li class="tag">UI design</li><li class="tag">IoT</li><li class="tag">B2C</li></ul>
+<h3>Designing a Smart Home App That Makes Every Sensor Simple to Control</h3>
+<p class="ctx">Successfully launched on iOS and Android.</p>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+<article class="card card--soon">
+<div class="cover"><img src="assets/img/cover-design-system.webp" alt="Design system documentation with typography, color palette and icons" width="1200" height="750" loading="lazy"></div>
+<div class="card-body">
+<ul class="tags"><li class="tag">Web</li><li class="tag">Design systems</li><li class="tag">UI design</li><li class="tag">Fintech</li></ul>
+<h3>Building a Single Source of Truth for 15+ Compliance Apps</h3>
+<p class="ctx">One design system shared across the compliance product suite.</p>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="about section-pad" id="about">
+<div class="wrap">
+<span class="label">About me<svg class="stroke" viewBox="0 0 140 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="stroke-fill" d="M4 24 C2 14 14 8 44 10 C78 6 112 10 136 7 C138 15 137 25 134 33 C104 35 70 32 36 36 C16 37 6 33 4 24 Z"></path></svg></span>
+<h2>Marketing first, design since 2016.</h2>
+<div class="about-top">
+<img class="portrait" src="assets/img/headshot.webp" alt="Portrait of Vanina Greco" width="160" height="160" loading="lazy">
+<div>
+<p>I started in marketing and moved into design in 2016. That keeps me grounded in business goals as well as user needs.</p>
+<p>Away from the screen, I enjoy creating art, from drawing to ceramics and mixed media, and doing yoga and writing short stories, with my cats as (somewhat unreliable) sidekicks.</p>
+<p class="facts">Based in Argentina · English (C2) · French (bilingual)</p>
+</div>
+<svg class="cat" viewBox="0 0 120 120" fill="none" stroke="#3F2D3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Doodle of a sitting cat"><circle cx="60" cy="42" r="20"></circle><path d="M43 28 L40 8 L56 22 M77 28 L80 8 L64 22"></path><circle cx="52" cy="42" r="2" fill="#3F2D3F"></circle><circle cx="68" cy="42" r="2" fill="#3F2D3F"></circle><path d="M58 48 L62 48 L60 51 Z"></path><path d="M44 48 L28 45 M44 52 L28 54 M76 48 L92 45 M76 52 L92 54"></path><path d="M42 58 C30 76 30 104 48 108 L74 108 C90 104 90 76 78 58"></path><path d="M80 100 C104 100 110 80 100 70 C96 66 92 70 96 74"></path><path d="M50 108 L50 114 M70 108 L70 114"></path></svg>
+</div>
+<p class="subhead">Industries I've designed for</p>
+<ul class="tags industries">
+<li class="tag">Smart water and HVAC IoT</li>
+<li class="tag">Fintech: payments and digital wallets</li>
+<li class="tag">Legal tech and financial compliance</li>
+<li class="tag">Healthcare and insurance</li>
+<li class="tag">Advertising and UGC</li>
+<li class="tag">Event technology</li>
+<li class="tag">Public sector platforms</li>
+<li class="tag">Industrial and plumbing tech</li>
+<li class="tag">Textile and apparel tech</li>
+</ul>
+<p class="subhead">Artsy hobbies I enjoy</p>
+<div class="handmade" tabindex="0" role="group" aria-label="Photos of my art, scroll sideways on small screens">
+<img class="h-ceramic" src="assets/img/hobby-ceramic.webp" alt="Handmade ceramic bowl with a leaf imprint and green glaze" width="800" height="800" loading="lazy">
+<img class="h-journal" src="assets/img/hobby-journal.webp" alt="Open art journal spread with pink and blue painted circles, collaged paper scraps and handwritten prompts" width="800" height="800" loading="lazy">
+<img class="h-draw" src="assets/img/hobby-drawing.webp" alt="Pencil sketch of a cat lying down in a sketchbook, with a pencil tip in the corner" width="800" height="800" loading="lazy">
+</div>
+</div>
+</section>
+
+<section class="cta section-pad" id="contact">
+<div class="wrap">
+<div class="cta-card">
+<h2>Want to create great products together?</h2>
+<p>Open to remote senior and lead product design roles. Write to me, or take my CV and read the details.</p>
+<div class="actions">
+<a class="btn btn-primary" href="mailto:vanina.greco@gmail.com">Email me</a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/vanina-greco/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn btn-secondary" href="assets/Vanina-Greco-CV.pdf" download>Download CV <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<span>© 2026 Vanina Greco</span>
+<a href="#top">Back to top</a>
+</div>
 </footer>
-
 </body>
 </html>

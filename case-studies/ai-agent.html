@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing an AI Agent That Gets Things Done, Vanina Greco</title>
+<meta name="description" content="Case study: how I designed and tested an AI agent for Cohley, a UGC platform, that answers client questions and completes tasks on their behalf.">
+<meta name="theme-color" content="#F4F4F7">
+<!-- Remove this noindex line once the figure placeholders below are replaced with the final images. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://vaninagreco.github.io/case-studies/ai-agent.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vanina Greco">
+<meta property="og:title" content="Designing an AI Agent That Gets Things Done">
+<meta property="og:description" content="Designing and testing an AI agent that answers client questions and completes tasks for Cohley, a UGC platform.">
+<meta property="og:url" content="https://vaninagreco.github.io/case-studies/ai-agent.html">
+<meta property="og:image" content="https://vaninagreco.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../assets/fonts/poppins-300-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/poppins-400-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="page-case" id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+<div class="wrap">
+<a class="back" href="../index.html#work"><span aria-hidden="true">←</span> Back to work</a>
+<a class="brand" href="../index.html">Vanina Greco</a>
+</div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<div class="case-head">
+<ul class="tags case-tags" aria-label="Topics"><li class="tag">AI</li><li class="tag">B2B</li><li class="tag">Research</li><li class="tag">Web</li></ul>
+<h1>Designing an AI Agent That Gets Things Done</h1>
+<dl class="meta">
+<div><dt>Role</dt><dd>Senior UX designer</dd></div>
+<div><dt>Period</dt><dd>November 2025 – April 2026</dd></div>
+<div><dt>Company</dt><dd>Cohley</dd></div>
+<div><dt>Team</dt><dd>CEO, design director, 3 developers, 1 tech lead</dd></div>
+<div><dt>Tools</dt><dd>Figma, Claude, Dust, Gong, Google Forms</dd></div>
+</dl>
+<figure class="cover-wide"><img src="../assets/img/hero-ai-agent.webp" alt="Cohley AI agent: a conversational assistant panel open beside a campaign page" width="1600" height="853" fetchpriority="high"></figure>
+</div>
+
+<article class="prose">
+<section id="overview">
+<h2>Overview</h2>
+<p>Cohley is a UGC platform (user-generated content) that helps consumer brands source, manage, and license creator content for marketing campaigns.</p>
+<p>Customer representatives spent too much time answering repetitive questions and handling routine client tasks.</p>
+<h3>Problem statement</h3>
+<p class="statement">How may we leverage an AI solution to reduce sales workload?</p>
+<p>The solution was to launch an AI agent that could answer client questions and execute simple actions on their behalf.</p>
+</section>
+
+<section id="outcomes">
+<h2>Outcomes</h2>
+<p>We launched the <strong>AI agent</strong> to a selected group of users as a beta.</p>
+<p>The test validated users' ability to complete workflows with the agent while uncovering key usability and trust issues.</p>
+<div class="callout">
+<div><span class="n">100%</span><span class="l">task completion across the moderated sessions</span></div>
+<div><span class="n">65%</span><span class="l">time gain in the brief workflow, reported by clients over 90 days</span></div>
+<div><span class="n">55%</span><span class="l">of agent requests are actions, versus 45% support questions</span></div>
+</div>
+<ul>
+<li><strong>100% task completion</strong> across the moderated sessions.</li>
+<li>5-6/6 of the users rated the two tasks from <strong>"Easy" to "Very Easy"</strong> to complete in the survey.</li>
+<li>The <strong>top usability issue</strong> (unclear processing status) was reported by <strong>~5 users</strong> and led to new progress and system-feedback designs.</li>
+<li>Clients later reported a <strong>65% time gain in the brief workflow</strong> over 90 days using the agent beta features.</li>
+<li><strong>55% of agent requests are actions</strong>, versus <strong>45% support questions</strong> (as reported by Cohley), showing adoption beyond a traditional support chatbot.</li>
+</ul>
+<figure class="figure">
+<video controls muted loop playsinline preload="metadata" poster="../assets/img/ai-agent-widget-poster.webp" width="1600" height="1072" aria-label="Screen recording of the AI agent widget opening on a campaign page and showing its suggested actions">
+<source src="../assets/video/ai-agent-widget.mp4" type="video/mp4">
+</video>
+<figcaption>The AI agent widget</figcaption>
+</figure>
+</section>
+
+<section id="process">
+<h2>Design process</h2>
+<p>We followed a classic 5-step process:</p>
+<ol class="steps">
+<li><strong>Discover.</strong> <em>Which tasks should we automate?</em>
+<ul>
+<li>Desk research on key AI trends and best practices</li>
+<li>Client feedback analysis on frequent and tedious tasks to automate</li>
+</ul></li>
+<li><strong>Define.</strong> <em>Which tasks could the agent handle at this point?</em>
+<ul>
+<li>Internal team feedback sessions on tasks to automate</li>
+<li>Feature scoping and refinement</li>
+</ul></li>
+<li><strong>Design</strong>
+<ul>
+<li>User flows</li>
+<li>Hi-fi mockups and prototypes</li>
+</ul></li>
+<li><strong>Validate with real users</strong>
+<ul>
+<li>User testing</li>
+<li>Survey</li>
+</ul></li>
+<li><strong>Continuous iteration</strong></li>
+</ol>
+<p>I will now dive into each of these activities in detail.</p>
+</section>
+
+<section id="discover">
+<h2>1. Discover</h2>
+<h3>Desk research</h3>
+<p>I conducted extensive research on relevant subjects such as AI trust, AI UX patterns, when to use automation, and how agents should fit within an existing product.</p>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-benchmark-full.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Research board with articles and resources on AI agents and UX at the top, and a benchmark of automation tools such as IFTTT, Trello and Apple Shortcuts below"><picture><source media="(max-width:639px)" srcset="../assets/img/ai-agent-benchmark-mobile.webp" width="1052" height="1275"><img src="../assets/img/ai-agent-benchmark.webp" data-full="../assets/img/ai-agent-benchmark-full.webp" alt="Research board with articles and resources on AI agents and UX at the top, and a benchmark of automation tools such as IFTTT, Trello and Apple Shortcuts below" width="2000" height="1063" loading="lazy"></picture></a>
+<figcaption>Desk research: articles and resources on AI agents and UX (top), and a benchmark of automation tools (bottom)</figcaption>
+</figure>
+<h3>Client feedback analysis</h3>
+<p>I analyzed recurring client needs from Gong calls using Dust AI to identify frequent tasks we could automate.</p>
+</section>
+
+<section id="define">
+<h2>2. Define</h2>
+<h3>Internal team feedback</h3>
+<p>We gathered input from the CSM team on the frequent tasks.</p>
+<h3>Define the feature's scope and goal</h3>
+<p>With the data from the previous steps, we chose which actions the agent could safely perform on the user's behalf.</p>
+<p>We prioritized frequent, lower-risk actions:</p>
+<ul>
+<li>Answer popular FAQs about the platform in a conversation</li>
+<li>Add creators to a "Maybe" list</li>
+<li>Mass-message creators</li>
+<li>Reimburse creators</li>
+</ul>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-actions-full.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Board of sticky notes with actions to automate grouped by theme, such as creator vetting, messages, content approval and payments, with supporting insights from Gong calls below"><picture><source media="(max-width:639px)" srcset="../assets/img/ai-agent-actions-mobile.webp" width="1102" height="900"><img src="../assets/img/ai-agent-actions.webp" data-full="../assets/img/ai-agent-actions-full.webp" alt="Board of sticky notes with actions to automate grouped by theme, such as creator vetting, messages, content approval and payments, with supporting insights from Gong calls below" width="2000" height="1063" loading="lazy"></picture></a>
+<figcaption>Actions to automate, grouped by theme, with the Gong call insights behind them</figcaption>
+</figure>
+</section>
+
+<section id="design">
+<h2>3. Design</h2>
+<h3>User flows</h3>
+<p>I revised and refined the user flows with the internal team (CEO, product director, and tech leads) to align on agent behavior, edge cases, feature goals, expected AI behavior, and technical constraints.</p>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-user-flow-full.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Flow diagram for the Add Creators to Maybe task, with the agent conversation screens for each step"><picture><source media="(max-width:639px)" srcset="../assets/img/ai-agent-user-flow-mobile.webp" width="1360" height="1009"><img src="../assets/img/ai-agent-user-flow.webp" data-full="../assets/img/ai-agent-user-flow-full.webp" alt="Flow diagram for the Add Creators to Maybe task, with the agent conversation screens for each step" width="2400" height="1169" loading="lazy"></picture></a>
+<figcaption>User flow for Add Creators to Maybe, shown as an example of the flows I designed for each task</figcaption>
+</figure>
+<h3>Mockups and AI prototypes</h3>
+<p>I turned all key tasks into high-fidelity designs and interactive prototypes with Figma Make and Claude Design for further internal validation and refinement.</p>
+</section>
+
+<section id="validate">
+<h2>4. Validate: user testing</h2>
+<p>The users invited to the beta could choose between a moderated session and a self-paced test, with a <strong>$50 Amazon gift card</strong> as an incentive.</p>
+<ul>
+<li><strong>4 moderated usability sessions</strong></li>
+<li><strong>6 survey respondents</strong></li>
+</ul>
+<p>The tasks included <strong>Add Creators to Maybe</strong> (a list company clients use for creator vetting) and <strong>Mass Message Creators</strong> (standard reply sent to all creators, such as an approaching deadline to submit videos).</p>
+<p>The research focused on four questions:</p>
+<ul>
+<li>Can users complete the task?</li>
+<li>Do they trust the agent?</li>
+<li>Does it save time?</li>
+<li>Do the agent's results match their expectations?</li>
+</ul>
+<figure class="figure">
+<img src="../assets/img/ai-agent-test.webp" alt="The agent panel with a user asking to mark creators as Maybe and find more, and the agent replying that it marked the top 7 applicants and that no more match the criteria" width="1360" height="850" loading="lazy">
+<figcaption>Test example: User asks agents to add Creators to the Maybe list immediately.</figcaption>
+</figure>
+
+<h3>Testing results and key findings</h3>
+<p>Users successfully completed the tested workflows, but the sessions revealed several important usability gaps.</p>
+
+<h4>1. Users didn't know if the agent was working</h4>
+<p><strong>~5 users</strong> were unsure when the agent would finish processing a request.</p>
+<p>There was not enough feedback to distinguish between <em>working</em>, <em>finished</em>, and <em>waiting</em> states.</p>
+<p><strong>Design response:</strong> I added clearer processing feedback and an "Analyzing" state to communicate progress.</p>
+<figure class="figure">
+<img src="../assets/img/ai-agent-response-times.webp" alt="Two agent panels compared: a quick Analyzing state for responses under 10 seconds, and a longer message with a dashed highlight for waits over 10 seconds" width="1360" height="850" loading="lazy">
+<figcaption>Processing feedback by response time: an “Analyzing…” state, plus a longer message when the wait passes 10 seconds</figcaption>
+</figure>
+
+<h4>2. Users wanted immediate access to the agent's results</h4>
+<p><strong>~4 users</strong> wanted to review creators immediately after the agent added them to the Maybe list.</p>
+<p>The AI could complete the task, but the UI didn't surface the outcome quickly enough for users to verify or adjust it.</p>
+<p><strong>Design response:</strong> We evaluated automatically surfacing Maybe'd creators so users could review and unmark them.</p>
+
+<h4>3. AI wasn't always faster</h4>
+<p>Users saw strong value in the agent for <strong>complex, cross-brief, or multi-step tasks</strong>, but less value for simple actions already available through the UI.</p>
+<p>For basic cases, typing a prompt could take longer than clicking an existing button.</p>
+<p>This became an important principle for the product:</p>
+<p class="statement"><strong>Use AI where it removes complexity, not where it replaces a simple click.</strong></p>
+
+<h4>4. The agent wasn't discoverable enough</h4>
+<p>First-time users sometimes didn't know the agent existed or where to find it.</p>
+<p>The "sparkle" notification was also easy to miss.</p>
+<p><strong>Design response:</strong> I improved agent discoverability and notification visibility.</p>
+</section>
+
+<section id="iteration">
+<h2>5. Continuous iteration</h2>
+<p>The agent continued evolving after the beta through:</p>
+<ul>
+<li>Prompt engineering supervised by the tech lead</li>
+<li>AI bug tracking, including daily Slack messages from Claude with main issues</li>
+<li>Usage analytics (clicks, open rate, usage time, video clips and more) with Pendo</li>
+<li>Internal feedback from the whole team</li>
+<li>Feedback from external power users</li>
+</ul>
+<p>The beta didn't just validate whether users could use an AI agent. It helped define <strong>where AI actually adds value inside Cohley's product, and where traditional UX is still better.</strong></p>
+<p class="thanks">Thanks for reading!</p>
+</section>
+</article>
+
+<div class="next-wrap">
+<article class="card card--soon">
+<div class="card-body">
+<span class="eyebrow">Next case study</span>
+<h3>Launching an ESG App That Became a Top Performer</h3>
+<span class="soon">Coming soon</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<span>© 2026 Vanina Greco</span>
+<a href="#top">Back to top</a>
+</div>
+</footer>
+<script src="../assets/js/lightbox.js" defer></script>
+</body>
+</html>
