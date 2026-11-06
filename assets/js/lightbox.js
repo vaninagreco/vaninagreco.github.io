@@ -1,7 +1,7 @@
 /* Click an image in a case study to see it full screen. Click the image again to toggle fit / full size.
    Without JavaScript the image stays a plain link (wide figures) or a normal picture. */
 (function () {
-  var imgs = document.querySelectorAll('.figure img, .cover-wide img');
+  var imgs = document.querySelectorAll('.figure img, .cover-wide a.zoom img');
   if (!imgs.length || typeof HTMLDialogElement === 'undefined') return;
 
   var dlg = document.createElement('dialog');
