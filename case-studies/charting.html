@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redesigning Charts to Cut Licensing Costs, Vanina Greco</title>
+<meta name="description" content="Case study: how I redesigned a sensor charting feature for a water IoT platform, replacing Power BI with an in-house solution and fixing 3 major usability issues before dev handoff.">
+<meta name="theme-color" content="#F4F4F7">
+<!-- Remove this noindex line if you want this page to show up in search results. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://vaninagreco.github.io/case-studies/charting.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vanina Greco">
+<meta property="og:title" content="Redesigning Charts to Cut Licensing Costs">
+<meta property="og:description" content="Replacing Power BI with an in-house charting feature for a water IoT platform, and fixing 3 major usability issues before dev handoff.">
+<meta property="og:url" content="https://vaninagreco.github.io/case-studies/charting.html">
+<meta property="og:image" content="https://vaninagreco.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../assets/fonts/poppins-300-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/poppins-400-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="page-case" id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+<div class="wrap">
+<a class="back" href="../index.html#work"><span aria-hidden="true">←</span> Back to work</a>
+<a class="brand" href="../index.html">Vanina Greco</a>
+</div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<div class="case-head">
+<ul class="tags case-tags" aria-label="Topics"><li class="tag">B2B</li><li class="tag">SaaS</li><li class="tag">IoT</li><li class="tag">Research</li><li class="tag">Web</li></ul>
+<h1>Redesigning Charts to Cut Licensing Costs</h1>
+<dl class="meta meta--4">
+<div><dt>Role</dt><dd>Senior UX UI designer</dd></div>
+<div><dt>Period</dt><dd>January 2023 – August 2024</dd></div>
+<div><dt>Company</dt><dd>Water IoT Solutions Company</dd></div>
+<div><dt>Team</dt><dd>1 UX UI designer, 1 product owner, and front-end developers</dd></div>
+</dl>
+<figure class="cover-wide"><img src="../assets/img/cover-charting.webp" alt="Analytics charting screen on a laptop against a pale blue water background" width="1200" height="750" fetchpriority="high"></figure>
+</div>
+
+<article class="prose">
+<section id="overview">
+<h2>Overview</h2>
+<p>The company* is a global leader in water solutions for residential, industrial, municipal, and commercial use. Its 26 brands cover drainage, HVAC and hot water, plumbing and flow control, water quality, and rainwater harvesting.</p>
+<p class="note">*Company name, brands, and logos are hidden for confidentiality reasons.</p>
+<p>Sales and customer success representatives (CSRs) use the platform's charting view to analyze sensor data across locations. They spot anomalies, find correlations, and build reports that reveal upsell opportunities.</p>
+<p>The charts ran on Power BI. To cut costs and gain flexibility, the product owner decided to replace it with an in-house feature.</p>
+<p>The new feature had to match Power BI's analysis capabilities, handle locations with more than 50 sensors, and fit tight agile sprints.</p>
+<h3>Problem statement</h3>
+<p class="statement"><em>How might we replace Power BI with an in-house charting feature that is easier to use?</em></p>
+<p>I led the UX design, research, and testing. I worked with the product owner on requirements, with developers on charting libraries, and with users through interviews and usability tests.</p>
+</section>
+
+<section id="outcomes">
+<h2>Outcomes</h2>
+<p>We launched the in-house charting feature with the improvements from usability testing. It removed the Power BI licensing dependency. Testing found 3 major issues, and we fixed them before dev handoff.</p>
+</section>
+
+<section id="process">
+<h2>Design process</h2>
+<ol class="steps">
+<li><strong>Research:</strong> <em>which features do users need?</em></li>
+<li><strong>Benchmark:</strong> <em>how do other tools handle large data volumes?</em></li>
+<li><strong>Design:</strong> <em>user flows and mockups</em></li>
+<li><strong>Validate:</strong> <em>usability testing</em></li>
+</ol>
+</section>
+
+<section id="research">
+<h2>1. Research</h2>
+<p>I interviewed 3 CSRs about how they use Power BI. The product owner joined the sessions.</p>
+<figure class="figure">
+<div class="box" role="img" aria-label="User interview with a sales rep">User interview with a sales rep (image coming)</div>
+<figcaption>A sales rep shows the product owner and me how he uses Power BI.</figcaption>
+</figure>
+<p>Users focused on two tasks:</p>
+<ul>
+<li><strong>Identifying anomalies</strong> to detect potential issues</li>
+<li><strong>Exploring correlations</strong> between sensors to uncover trends or errors</li>
+</ul>
+<ul class="quotes">
+<li class="quote quote--lilac"><blockquote><p>“If there are giant spikes, and if they were having very few spikes, or a few drops in this period of time... Now this next month, they're going lower. <strong>Why are they lower here</strong>? Did something happen? Is there a reason?”</p></blockquote></li>
+<li class="quote quote--violet"><blockquote><p>“I always have a look at the <strong>big picture and then start drilling down</strong>. When you start isolating them in smaller time frames, things can become more obvious.”</p></blockquote></li>
+<li class="quote quote--white"><blockquote><p>“Say we have like 3 heaters and we started <strong>overlaying</strong> some sensors and you know two of them <strong>should be trending together</strong>. Two of them are not trending together and you can start finding errors and that's where you can start finding crossover.”</p></blockquote></li>
+</ul>
+<figure class="figure">
+<div class="box" role="img" aria-label="Power BI screenshot">Power BI screenshot (image coming)</div>
+<figcaption>Power BI screenshot of a user selecting sensors to check correlations.</figcaption>
+</figure>
+<p>Some improvements they asked for include space for long sensor names, easy adding and removing of sensors, zoom, and a view of 15–20 sensors together.</p>
+<p>From this research we defined the key tasks: compare sensors in a single view, zoom into abnormal data, and share charts with customers. We also set the essential features: sensor selection, zoom, and adding charts.</p>
+<p>Not every request made it. We limited the view to 10 sensors instead of 20, because stress tests showed that more made the data illegible.</p>
+<figure class="figure">
+<div class="box" role="img" aria-label="Feature list">Feature list (image coming)</div>
+<figcaption>Feature list, prioritized after the research.</figcaption>
+</figure>
+</section>
+
+<section id="benchmark">
+<h2>2. Benchmark</h2>
+<p>I analyzed internal tools and external ones: Power BI, Beestat, Yahoo Finance, and Room Alert. I looked at how they:</p>
+<ul>
+<li>Show multiple charts in one view</li>
+<li>Filter data points</li>
+<li>Add and remove data points</li>
+<li>Add and edit charts</li>
+</ul>
+<figure class="figure">
+<div class="box" role="img" aria-label="Internal charting views">Internal charting views (image coming)</div>
+<figcaption>Charting views from the sensor device screen and old versions of the platform.</figcaption>
+</figure>
+<figure class="figure">
+<div class="box" role="img" aria-label="Competitor benchmark">Competitor benchmark (image coming)</div>
+<figcaption>Benchmark of Power BI, Beestat, Yahoo Finance, and Room Alert.</figcaption>
+</figure>
+</section>
+
+<section id="design">
+<h2>3. User flows and mockups</h2>
+<p>I designed mockups for four flows:</p>
+<ul>
+<li>Default state: one chart per type (temperature, pressure, flow, leak)</li>
+<li>Filtering and visualization tools</li>
+<li>Adding and removing sensors</li>
+<li>Adding a new chart</li>
+</ul>
+<figure class="figure">
+<div class="box" role="img" aria-label="Mockup iterations">Mockup iterations (image coming)</div>
+<figcaption>Some mockup iterations for the charting view.</figcaption>
+</figure>
+<h4>Sensor filtering flow</h4>
+<figure class="figure">
+<div class="box" role="img" aria-label="Sensor filtering flow">Sensor filtering flow (image coming)</div>
+<figcaption>Sensor filtering flow.</figcaption>
+</figure>
+<h4>Edit sensors flow</h4>
+<figure class="figure">
+<div class="box" role="img" aria-label="Edit sensors flow">Edit sensors flow (image coming)</div>
+<figcaption>Edit sensors flow.</figcaption>
+</figure>
+</section>
+
+<section id="validate">
+<h2>4. Validate: usability testing</h2>
+<p>I ran moderated tests in Maze with 5 internal users: 2 product managers and 3 CSRs. They completed four tasks:</p>
+<ol class="steps">
+<li><strong>Filter chips:</strong> show only the “DHW Temp In C9” sensor.</li>
+<li><strong>Edit sensors:</strong> add the “DHW Return Pressure Out C1” sensor.</li>
+<li><strong>Full screen:</strong> open the first chart in full screen.</li>
+<li><strong>Box selection:</strong> zoom in on “DHW Temp In C9” at 4:30 AM.</li>
+</ol>
+<figure class="figure">
+<div class="box" role="img" aria-label="Maze test">Maze test (image coming)</div>
+<figcaption>Maze test setup.</figcaption>
+</figure>
+<p>The tests found <strong>3 major issues</strong> and 4 smaller ones. The major ones:</p>
+<ul>
+<li><strong>Two “Clear” buttons:</strong> 4 of 5 users clicked the wrong one.</li>
+<li><strong>Back button:</strong> 3 of 5 struggled to find it.</li>
+<li><strong>Zoom icon:</strong> all 5 missed it.</li>
+</ul>
+<p>We fixed them by removing the second “Clear” button, making “Back” more visible, enabling zoom by click-and-drag or click-and-scroll, adding a collapse option for filter chips, and changing the box selection icon.</p>
+<figure class="figure">
+<div class="box" role="img" aria-label="Task completion">Task completion (image coming)</div>
+<figcaption>Task completion by task.</figcaption>
+</figure>
+<figure class="figure">
+<div class="box" role="img" aria-label="Changes after testing">Changes after testing (image coming)</div>
+<figcaption>Changes after testing.</figcaption>
+</figure>
+<p>The 4 smaller issues stay open for follow-up:</p>
+<ul>
+<li><strong>Zoom icon:</strong> keep testing it, even with the tooltip. Some users said it looks like a “minimize” icon.</li>
+<li><strong>“Clear All” wording:</strong> test “Hide All” instead.</li>
+<li><strong>Default charts:</strong> decide which charts to show, such as one of each type.</li>
+<li><strong>Paid feature:</strong> make sure users understand why it is a paid feature.</li>
+</ul>
+<p>Early research and fast testing helped us prioritize features and fit the sprint schedule. Fixing issues before handoff also reduced rework.</p>
+<figure class="figure">
+<div class="box" role="img" aria-label="Final mockups">Final mockups (image coming)</div>
+<figcaption>Some final mockups.</figcaption>
+</figure>
+<p class="thanks">Thanks for reading!</p>
+</section>
+</article>
+
+<div class="next-wrap">
+<article class="card">
+<div class="card-body">
+<span class="eyebrow">Next case study</span>
+<h3>Designing an AI Agent That Gets Things Done</h3>
+<a class="more" href="ai-agent.html">Read case study <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+</div>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<span>© 2026 Vanina Greco</span>
+<a href="#top">Back to top</a>
+</div>
+</footer>
+<script src="../assets/js/lightbox.js" defer></script>
+</body>
+</html>
