@@ -257,6 +257,7 @@ h3{font-size:20px;font-weight:500;line-height:1.3}
   .trio{grid-template-columns:repeat(3,1fr)}
   .trio.duo{grid-template-columns:repeat(2,1fr)}
   .trio.duo .cover{aspect-ratio:16/6.4}
+  .featured-block .trio.duo .cover{aspect-ratio:16/10}
   .about-top{grid-template-columns:160px 1fr 120px;gap:40px}
   .cat{justify-self:end;align-self:end}
   .cta-card{padding:72px}
