@@ -110,6 +110,7 @@ h3{font-size:20px;font-weight:500;line-height:1.3}
 .metrics{display:flex;flex-wrap:wrap;gap:8px 32px;margin-top:auto}
 .metric .n{display:block;font-size:36px;font-weight:300;line-height:1.1;color:var(--accent)}
 .metric .l{display:block;max-width:180px;font-size:14px;color:var(--muted)}
+.metrics .metric:only-child .l{max-width:none}
 .more{display:inline-flex;align-items:center;align-self:flex-start;gap:8px;min-height:44px;font-size:14px;font-weight:500;color:var(--accent);text-decoration:none}
 .more:hover{color:var(--accent-hover)}
 .soon{display:inline-flex;align-items:center;align-self:flex-start;min-height:44px;font-size:14px;font-weight:500;color:var(--muted)}
