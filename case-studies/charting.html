@@ -52,6 +52,9 @@
 <h2>Overview</h2>
 <p>The company* is a global leader in water solutions for residential, industrial, municipal, and commercial use. Its 26 brands cover drainage, HVAC and hot water, plumbing and flow control, water quality, and rainwater harvesting.</p>
 <p class="note">*Company name, brands, and logos are hidden for confidentiality reasons.</p>
+<figure class="figure">
+<img src="../assets/img/charting-company.webp" data-full="../assets/img/charting-company-full.webp" alt="Four photos of the company's products installed in the field: a technician working on a water control unit, large commercial water heaters, a tablet showing a sensor chart next to a controller, and plumbing fittings on a tank" width="1600" height="1000" loading="lazy">
+</figure>
 <p>Sales representatives use the platform's charting view to analyze sensor data across locations. They spot anomalies, find correlations, and build reports that reveal upsell opportunities.</p>
 <p>The charts ran on Power BI. To cut costs and gain flexibility, the product owner decided to replace it with an in-house feature.</p>
 <p>The new feature had to match Power BI's analysis capabilities, handle locations with more than 50 sensors, and fit tight agile sprints.</p>
@@ -79,7 +82,7 @@
 <h2>1. Research</h2>
 <p>I interviewed 3 customer success representatives about how they use Power BI. The product owner joined the sessions.</p>
 <figure class="figure">
-<div class="box" role="img" aria-label="User interview with a sales rep">User interview with a sales rep (image coming)</div>
+<img src="../assets/img/charting-interview.webp" data-full="../assets/img/charting-interview-full.webp" alt="Video call screenshot of a user interview: a sales rep, with his face blurred, shows the product owner and me how he uses Power BI to chart sensor data" width="1600" height="1000" loading="lazy">
 <figcaption>A sales rep shows the product owner and me how he uses Power BI.</figcaption>
 </figure>
 <p>We discovered that users focused on two tasks in their analysis:</p>
@@ -93,10 +96,6 @@
 <li class="quote quote--violet"><blockquote><p>“I always have a look at the <strong>big picture and then start drilling down</strong>. When you start isolating them in smaller time frames, things can become more obvious.”</p></blockquote></li>
 <li class="quote quote--white"><blockquote><p>“Say we have like 3 heaters and we started <strong>overlaying</strong> some sensors and you know two of them <strong>should be trending together</strong>. Two of them are not trending together and you can start finding errors and that's where you can start finding crossover.”</p></blockquote></li>
 </ul>
-<figure class="figure">
-<div class="box" role="img" aria-label="Power BI screenshot">Power BI screenshot (image coming)</div>
-<figcaption>Power BI screenshot of a user selecting sensors to check correlations.</figcaption>
-</figure>
 <p>Some improvements they asked for include space for long sensor names, easy adding and removing of sensors, zoom, and a view of 15–20 sensors together.</p>
 <p>From this research we defined the key tasks: compare sensors in a single view, zoom into abnormal data, and share charts with customers. We also set the essential features: sensor selection, zoom, and adding charts.</p>
 <p>Not every request made it. We limited the view to 10 sensors instead of 20, because stress tests showed that more made the data illegible.</p>
