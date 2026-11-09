@@ -52,7 +52,7 @@
 <h2>Overview</h2>
 <p>The company* is a global leader in water solutions for residential, industrial, municipal, and commercial use. Its 26 brands cover drainage, HVAC and hot water, plumbing and flow control, water quality, and rainwater harvesting.</p>
 <p class="note">*Company name, brands, and logos are hidden for confidentiality reasons.</p>
-<p>Sales and customer success representatives (CSRs) use the platform's charting view to analyze sensor data across locations. They spot anomalies, find correlations, and build reports that reveal upsell opportunities.</p>
+<p>Sales representatives use the platform's charting view to analyze sensor data across locations. They spot anomalies, find correlations, and build reports that reveal upsell opportunities.</p>
 <p>The charts ran on Power BI. To cut costs and gain flexibility, the product owner decided to replace it with an in-house feature.</p>
 <p>The new feature had to match Power BI's analysis capabilities, handle locations with more than 50 sensors, and fit tight agile sprints.</p>
 <h3>Problem statement</h3>
@@ -77,16 +77,17 @@
 
 <section id="research">
 <h2>1. Research</h2>
-<p>I interviewed 3 CSRs about how they use Power BI. The product owner joined the sessions.</p>
+<p>I interviewed 3 customer success representatives about how they use Power BI. The product owner joined the sessions.</p>
 <figure class="figure">
 <div class="box" role="img" aria-label="User interview with a sales rep">User interview with a sales rep (image coming)</div>
 <figcaption>A sales rep shows the product owner and me how he uses Power BI.</figcaption>
 </figure>
-<p>Users focused on two tasks:</p>
+<p>We discovered that users focused on two tasks in their analysis:</p>
 <ul>
 <li><strong>Identifying anomalies</strong> to detect potential issues</li>
 <li><strong>Exploring correlations</strong> between sensors to uncover trends or errors</li>
 </ul>
+<p class="lead-in"><strong>Actual user quotes:</strong></p>
 <ul class="quotes">
 <li class="quote quote--lilac"><blockquote><p>“If there are giant spikes, and if they were having very few spikes, or a few drops in this period of time... Now this next month, they're going lower. <strong>Why are they lower here</strong>? Did something happen? Is there a reason?”</p></blockquote></li>
 <li class="quote quote--violet"><blockquote><p>“I always have a look at the <strong>big picture and then start drilling down</strong>. When you start isolating them in smaller time frames, things can become more obvious.”</p></blockquote></li>
@@ -151,7 +152,7 @@
 
 <section id="validate">
 <h2>4. Validate: usability testing</h2>
-<p>I ran moderated tests in Maze with 5 internal users: 2 product managers and 3 CSRs. They completed four tasks:</p>
+<p>I ran moderated tests in Maze with 5 internal users: 2 product managers and 3 customer success representatives. They completed four tasks:</p>
 <ol class="steps">
 <li><strong>Filter chips:</strong> show only the “DHW Temp In C9” sensor.</li>
 <li><strong>Edit sensors:</strong> add the “DHW Return Pressure Out C1” sensor.</li>
