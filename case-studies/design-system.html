@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building a Single Source of Truth for 15+ Compliance Apps, Vanina Greco</title>
+<meta name="description" content="Case study: how I built a design system as the single source of truth for 15+ financial compliance applications, and kept it working with limited developer time.">
+<meta name="theme-color" content="#F4F4F7">
+<!-- Remove this noindex line if you want this page to show up in search results. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://vaninagreco.github.io/case-studies/design-system.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vanina Greco">
+<meta property="og:title" content="Building a Single Source of Truth for 15+ Compliance Apps">
+<meta property="og:description" content="A design system for 15+ financial compliance applications, built to work with limited developer time.">
+<meta property="og:url" content="https://vaninagreco.github.io/case-studies/design-system.html">
+<meta property="og:image" content="https://vaninagreco.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../assets/fonts/poppins-300-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="../assets/fonts/poppins-400-normal.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="page-case" id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+<div class="wrap">
+<a class="back" href="../index.html#work"><span aria-hidden="true">←</span> Back to work</a>
+<a class="brand" href="../index.html">Vanina Greco</a>
+</div>
+</header>
+
+<main id="main">
+<div class="wrap">
+<div class="case-head">
+<ul class="tags case-tags" aria-label="Topics"><li class="tag">Design Systems</li><li class="tag">B2B</li><li class="tag">SaaS</li><li class="tag">Fintech</li><li class="tag">UI Design</li><li class="tag">Web</li></ul>
+<h1>Building a Single Source of Truth for 15+ Compliance Apps</h1>
+<dl class="meta">
+<div><dt>Role</dt><dd>UX UI designer → UX lead</dd></div>
+<div><dt>Period</dt><dd>June 2019 – January 2023</dd></div>
+<div><dt>Sector</dt><dd>Financial compliance</dd></div>
+<div><dt>Team</dt><dd>1 to 3 designers and up to 2 developers, depending on project resources</dd></div>
+<div><dt>Tools</dt><dd>Sketch, Abstract, Zeplin, Storybook, Grav CMS, Figma</dd></div>
+</dl>
+<figure class="cover-wide"><img src="../assets/img/cover-design-system.webp" alt="Design system documentation board with typography, a color palette and a graph palette on a dark purple background" width="1200" height="750" fetchpriority="high"></figure>
+</div>
+
+<article class="prose">
+<section id="overview">
+<h2>Overview</h2>
+<p>The company* is a web platform that helps legal and financial professionals manage regulatory documents and stay compliant with the SEC (U.S. Securities and Exchange Commission), offering 15+ applications for specialized searches and reporting tasks.</p>
+<p class="note">*Company name is hidden for confidentiality reasons.</p>
+<p>In this project, I created a unified <strong>Design System</strong> to serve as the <strong>single source of truth</strong> across the platform's ecosystem.</p>
+<p>With so many applications built by different teams, the platform’s ecosystem suffered from inconsistent UI patterns and redundant components. These inconsistencies confused users, slowed design delivery, and increased development complexity.</p>
+<p>The company would not allocate developer time to maintain a React component library. So the design team built a system that worked without it.</p>
+<h3>Problem statement</h3>
+<p class="statement"><em>How might we centralize design specs in one place that is simple to maintain and that every team uses?</em></p>
+</section>
+
+<section id="team">
+<h2>The Design System Team</h2>
+<p>Depending on project resources, the team had 1 to 3 designers and up to 2 developers.</p>
+<p>Another designer started the project and left the company a few months in. I took over as the <strong>primary contributor.</strong> I created and maintained the Design System and the shared Sketch component library, and I advocated for both across teams.</p>
+<p>As more designers joined, I became the senior designer on the team. In June 2022, I was promoted to UX Lead. The Design System became one of several team goals I owned.</p>
+</section>
+
+<section id="outcomes">
+<h2>Outcomes</h2>
+<p>We delivered a Sketch library, Zeplin specs, a React component library in Storybook, and a documentation site in Grav.</p>
+<p>The company did not allocate developer time to maintain the React library. We designed the system to work anyway.</p>
+<ul>
+<li><strong>A consistent design foundation.</strong> The Sketch library kept our design work consistent and simpler across 15+ applications.</li>
+<li><strong>A relaunch led by research.</strong> A survey of developers and QA members shaped our tooling. Zeplin became the spec tool, and the React repository became the developers' source. Weekly meetings with developers started in September 2021.</li>
+<li><strong>A leaner system.</strong> I proposed moving to Figma only in my promotion presentation. It retires Sketch, Abstract, and Zeplin, needs little or no developer time, and gives developers and QA clearer handoff files.</li>
+</ul>
+</section>
+
+<section id="process">
+<h2>Design Process</h2>
+<ol class="steps">
+<li><strong>Research &amp; inventory:</strong> <em>how do teams document today, and what do they need?</em></li>
+<li><strong>Defining a framework:</strong> <em>which structure fits the system?</em></li>
+<li><strong>Build and launch:</strong> <em>one library, one place for specs</em></li>
+<li><strong>Measure and adapt:</strong> <em>is anyone using it?</em></li>
+</ol>
+
+<h3>1. Research &amp; inventory</h3>
+<p>I started with research to understand needs and pain points.</p>
+<ul>
+<li>I conducted user interviews with developers, QA, and stakeholders.</li>
+<li>I conducted a full component audit to identify styling and usage inconsistencies, then created a prioritized list for unification.</li>
+</ul>
+
+<h3>2. Defining a framework</h3>
+<p>We structured the system with Atomic Design: atoms, molecules, organisms, templates, and pages. It gave the team a shared way to decide what counts as a component.</p>
+
+<h3>3. Build and launch</h3>
+<p>The design team refined each audited component, then launched the system with four pieces:</p>
+<ul>
+<li><strong>Sketch library</strong> for designers. One file, linked to every project file as a library. It covered buttons, tabs, tooltips, popups, table rows, icons, colors, and font styles.</li>
+<li><strong>Zeplin library</strong> linked to Sketch, with specs and handoff details for each component.</li>
+<li><strong>Documentation site</strong> in Grav CMS. It gave guidance on styling, usage, and spacing, plus technical notes for developers, such as environments and code best practices.</li>
+<li><strong>Storybook library</strong> built by front-end developers. The documentation site linked each component to its React counterpart.</li>
+</ul>
+<figure class="figure figure--wide">
+<div class="box" role="img" aria-label="Image placeholder: a page of the documentation site">[Image coming soon: a page of the documentation site]</div>
+<figcaption>One of the pages of the documentation site.</figcaption>
+</figure>
+
+<h3>4. Measure and adapt</h3>
+<p>I surveyed developers and QA members and met with key collaborators to understand adoption. Then we adapted the tooling to what they needed. Details below.</p>
+</section>
+
+<section id="evolution">
+<h2>Design System Evolution</h2>
+<ol class="timeline" aria-label="Design system timeline">
+<li><span class="when">Jul 2019</span><div><strong>Project kick-off</strong><span>Research and components inventory.</span></div></li>
+<li><span class="when">Sep 2019</span><div><strong>First version launch</strong><span>Sketch library, Zeplin, and a documentation site in Grav.</span></div></li>
+<li><span class="when">Jun 2020</span><div><strong>Second wind</strong><span>Usage survey and documentation discussions.</span></div></li>
+<li><span class="when">Sep 2021</span><div><strong>New design system team</strong><span>Weekly meetings, with developers working on React components.</span></div></li>
+<li><span class="when">Jan 2023</span><div><strong>Maintenance</strong><span>Sketch library updates only, no more developer time.</span></div></li>
+<li class="is-future"><span class="when">Future</span><div><strong>Future plans</strong><span>Get more developer time. Migrate to Figma.</span></div></li>
+</ol>
+<p>After launch, designers left, and new high-priority projects started. The design system stopped being a priority. Designers kept using it and maintaining it, but no more dev time was allocated to maintain the Storybook counterpart.</p>
+<p>Almost a year later, management added a relaunch to its yearly objectives. Before relaunching, I wanted to know why adoption was low outside of the design team. I ran a survey with developers and QA members (21 responses) and held meetings with key collaborators.</p>
+
+<h3>Main insights</h3>
+<p>The survey shaped the relaunch. It changed which tools we used and what we asked developers to do.</p>
+<figure class="figure figure--wide">
+<div class="box" role="img" aria-label="Image placeholder: survey results, July 2020">[Image coming soon: survey results]</div>
+<figcaption>Survey results, July 2020.</figcaption>
+</figure>
+<p>The survey and meetings showed three things:</p>
+<ul>
+<li><strong>People did not look in one place.</strong> Only 4 of 21 checked the documentation site when they had a question. They asked the UX team (13), opened the Miro board (13), checked Zeplin (11), or asked product managers (11). There was no clear source of truth.</li>
+<li><strong>People wanted specs and foundations first.</strong> Component specs (16), icons, fonts, and colors (15), and do's and don'ts (15) led the list. Code patterns, snippets, and APIs ranked lower (4–7).</li>
+<li><strong>Developers wanted a code repository, not documentation.</strong> They cared little about design details. They wanted one central repository of React components with the right styling built in.</li>
+</ul>
+<p>We made two decisions:</p>
+<ul>
+<li>Zeplin became the main tool for design specs.</li>
+<li>The React repository became the developers' source.</li>
+</ul>
+<p>The React components and the Sketch library had drifted apart, so we asked for developer hours to review the repository.</p>
+
+<h3>Final results</h3>
+<p>The system kept evolving as sprint priorities and available resources changed. In September 2021, a new design system team started weekly meetings, and developers worked on React components. But the developers kept moving to new feature projects. By January 2023, only the Sketch library received updates.</p>
+<p>At my promotion presentation, I proposed a process that needed little or no developer time: <strong>use Figma only</strong>, and retire Sketch, Abstract, and Zeplin. Consolidating tools would save costs and give developers and QA clearer mockup documentation.</p>
+<figure class="figure">
+<div class="box" role="img" aria-label="Image placeholder: the Figma-only proposal from my promotion presentation">[Image coming soon: Figma proposal]</div>
+</figure>
+<p>After my promotion in June 2022, new designers joined the team. We planned to prove the system's value with metrics: inconsistencies, bugs, and rework.</p>
+<p>By January 2023, the UX team was growing. We planned to ask for development time again and confirmed the migration to Figma.</p>
+</section>
+
+<section id="lessons">
+<h2>Key lessons learned</h2>
+<ul>
+<li><strong>Build for the resources you have.</strong> With no developer time, we kept the design source lean. Designers owned it, and Figma would replace three tools.</li>
+<li><strong>Make it cross-functional from the start.</strong> A Design System can’t thrive if it's siloed within the design team. Input from developers, QA, and product leads ensures broader relevance and <strong>buy-in</strong>.</li>
+<li><strong>Put it where people already look.</strong> Only 4 of 21 checked our documentation site, while 11 already used Zeplin. We made Zeplin the main spec tool.</li>
+<li><strong>Make it easy to find, maintain, and update</strong> for everyone.</li>
+<li><strong>Communicate in trusted channels.</strong> Clear, consistent communication is essential. Share updates through widely used channels to ensure adoption and alignment.</li>
+</ul>
+<p class="thanks">Thanks for reading!</p>
+</section>
+</article>
+
+<div class="next-wrap">
+<article class="card">
+<div class="card-body">
+<span class="eyebrow">Next case study</span>
+<h3>Designing an AI Agent That Gets Things Done</h3>
+<a class="more" href="ai-agent.html">Read case study <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+</div>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<span>© 2026 Vanina Greco</span>
+<a href="#top">Back to top</a>
+</div>
+</footer>
+<script src="../assets/js/lightbox.js" defer></script>
+</body>
+</html>
