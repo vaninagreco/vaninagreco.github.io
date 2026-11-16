@@ -43,7 +43,7 @@
 <div><dt>Period</dt><dd>November 2025 – April 2026</dd></div>
 <div><dt>Company</dt><dd>Cohley</dd></div>
 <div><dt>Team</dt><dd>CEO, design director, 3 developers, 1 tech lead</dd></div>
-<div><dt>Tools</dt><dd>Figma, Claude, Dust, Gong, Google Forms</dd></div>
+<div><dt>Tools</dt><dd>Figma, Figma Make, Claude, Claude Design, v0, Dust, Gong, Google Forms</dd></div>
 </dl>
 <figure class="cover-wide"><img src="../assets/img/hero-ai-agent.webp" alt="Cohley AI agent: a conversational assistant panel open beside a campaign page" width="1600" height="853" fetchpriority="high"></figure>
 </div>
@@ -89,7 +89,7 @@
 <li><strong>Discover.</strong> <em>Which tasks should we automate?</em>
 <ul>
 <li>Desk research on key AI trends and best practices</li>
-<li>Client feedback analysis on frequent and tedious tasks to automate</li>
+<li>AI-assisted client feedback analysis on frequent and tedious tasks to automate</li>
 </ul></li>
 <li><strong>Define.</strong> <em>Which tasks could the agent handle at this point?</em>
 <ul>
@@ -99,7 +99,7 @@
 <li><strong>Design</strong>
 <ul>
 <li>User flows</li>
-<li>Hi-fi mockups and prototypes</li>
+<li>Hi-fi mockups and AI-built prototypes</li>
 </ul></li>
 <li><strong>Validate with real users</strong>
 <ul>
@@ -108,6 +108,14 @@
 </ul></li>
 <li><strong>Continuous iteration</strong></li>
 </ol>
+<h3>AI-enhanced design</h3>
+<p>I used AI to enhance &amp; optimize each task, always asking for sources and checking outputs before making decisions.</p>
+<ul>
+<li><strong>Research synthesis.</strong> I used Dust with Snowflake, Gong, and Pendo to identify client pain points and requests from calls, report on usage data, and summarize interviews and tests.</li>
+<li><strong>Custom agents.</strong> I built two Dust agents with narrow jobs and explicit rules: a Gong calls analyst that ranks client calls by how clearly brands state their goals, and a UX copy agent that writes in our brand voice and tone.</li>
+<li><strong>Rapid prototyping.</strong> I explored design directions with v0 and Claude Design and built interactive prototypes on our design system in Figma Make.</li>
+<li><strong>Design system as a prompt.</strong> I exported our tokens and design requirements from Figma into one Markdown file that any AI tool can read. I fed it to v0 and Claude Design to keep the explorations consistent with the design system.</li>
+</ul>
 <p>I will now dive into each of these activities in detail.</p>
 </section>
 
@@ -120,13 +128,13 @@
 <figcaption>Desk research: articles and resources on AI agents and UX (top), and a benchmark of automation tools (bottom)</figcaption>
 </figure>
 <h3>Client feedback analysis</h3>
-<p>I analyzed recurring client needs from Gong calls using Dust AI to identify frequent tasks we could automate.</p>
+<p>I used Dust, connected to Gong, to analyze 10-20 client calls and list recurring pains, requests, and ideas. This showed which tasks were most frequent and tedious. I asked Dust for sources and checked each theme against the original calls.</p>
 </section>
 
 <section id="define">
 <h2>2. Define</h2>
 <h3>Internal team feedback</h3>
-<p>We gathered input from the CSM team on the frequent tasks.</p>
+<p>We gathered input from the customer success managers on the frequent tasks.</p>
 <h3>Define the feature's scope and goal</h3>
 <p>With the data from the previous steps, we chose which actions the agent could safely perform on the user's behalf.</p>
 <p>We prioritized frequent, lower-risk actions:</p>
@@ -147,7 +155,11 @@
 <figcaption>User flow for Add Creators to Maybe, shown as an example of the flows I designed for each task</figcaption>
 </figure>
 <h3>Mockups and AI prototypes</h3>
-<p>I turned all key tasks into high-fidelity designs and interactive prototypes with Figma Make and Claude Design for further internal validation and refinement.</p>
+<p>I created quick mockups with v0 and Claude Design, using the same prompt for each, to explore different AI widget options. Once defined, I built interactive prototypes for each key task in Figma Make to share with the team for validation and iteration.</p>
+<figure class="figure figure--wide">
+<a class="zoom" href="../assets/img/ai-agent-mockups-full.webp" target="_blank" rel="noopener" aria-label="Open the full-size image in a new tab: Side panel versions for the agent generated with v0 on the left and Claude Design on the right. Both show a creator list with the AI agent panel open on the right, offering actions such as Add Creators to Maybe and Send message to Creators."><img src="../assets/img/ai-agent-mockups.webp" data-full="../assets/img/ai-agent-mockups-full.webp" alt="Side panel versions for the agent generated with v0 on the left and Claude Design on the right. Both show a creator list with the AI agent panel open on the right, offering actions such as Add Creators to Maybe and Send message to Creators." width="2000" height="933" loading="lazy"></a>
+<figcaption>Side panel versions for the agent, generated with v0 and Claude Design. UI partially hidden for confidentiality</figcaption>
+</figure>
 </section>
 
 <section id="validate">
@@ -165,6 +177,7 @@
 <li>Does it save time?</li>
 <li>Do the agent's results match their expectations?</li>
 </ul>
+<p>I used Dust with Claude to summarize session transcripts and survey responses and cluster the findings by theme, validating key insights against the original recordings.</p>
 <figure class="figure">
 <img src="../assets/img/ai-agent-test.webp" alt="A moderated test session: the agent panel open over the platform, with a user asking to mark creators as Maybe and find more, and the agent replying that it marked the top 7 applicants and that no more match the criteria. A video thumbnail of the participant appears at the top right." width="1360" height="850" loading="lazy">
 <figcaption>Test example: User asks agents to add Creators to the Maybe list. The UI and participant photo were modified for confidentiality.</figcaption>
@@ -205,7 +218,7 @@
 <ul>
 <li>Prompt engineering supervised by the tech lead</li>
 <li>AI bug tracking, including daily Slack messages from Claude with main issues</li>
-<li>Usage analytics (clicks, open rate, usage time, video clips and more) with Pendo</li>
+<li>Usage analytics with Pendo (clicks, open rate, usage time, video clips and more). I used Dust to turn the figures into reports that evaluated each UI change.</li>
 <li>Internal feedback from the whole team</li>
 <li>Feedback from external power users</li>
 </ul>
