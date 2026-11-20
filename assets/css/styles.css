@@ -72,7 +72,7 @@ main{display:flex;flex-direction:column}
 .sketch{position:relative;max-width:460px}
 .sketch .panel{position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;background:var(--lilac);border-radius:var(--r-card);z-index:0}
 .sketch img.photo{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:1340/1025;object-fit:cover;border-radius:var(--r-card);border:1px solid var(--border)}
-.sticker{position:absolute;z-index:3;top:-16px;right:-8px;max-width:200px;padding:8px 16px;border-radius:var(--r-btn);background:var(--lilac);color:var(--text);box-shadow:var(--shadow);font-size:13px;font-weight:500;line-height:1.4;transform:rotate(-2deg)}
+.sticker{position:absolute;z-index:3;top:-16px;right:-8px;white-space:nowrap;padding:8px 16px;border-radius:var(--r-btn);background:var(--lilac);color:var(--text);box-shadow:var(--shadow);font-size:13px;font-weight:500;line-height:1.4;transform:rotate(-2deg)}
 .hi{position:absolute;z-index:3;left:-16px;bottom:-40px;display:flex;align-items:center;gap:12px}
 .hi img{display:block;width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);background:var(--lilac)}
 .hi span{padding:8px 12px;border-radius:var(--r-btn);background:var(--surface);border:1px solid var(--border);font-size:13px;font-weight:500}
