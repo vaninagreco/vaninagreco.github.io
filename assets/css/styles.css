@@ -80,6 +80,7 @@ main{display:flex;flex-direction:column}
 .sub{margin-top:24px;max-width:650px;font-size:18px;line-height:1.6;color:var(--text);text-wrap:pretty}
 .actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
 .hero-panel .btn-secondary{background:rgba(255,255,255,.6)}
+.hero-panel .btn-secondary:hover{background:var(--tag)}
 .hi{position:absolute;top:16px;right:16px;display:flex;align-items:center}
 .hi span{position:relative;z-index:1;margin-right:-16px;padding:8px 14px;border-radius:var(--r-btn);background:#F1E9FA;border:3px solid #E3D3F0;color:#1F161F;font-size:15px;font-weight:500;line-height:1.3;white-space:nowrap}
 .hi img{display:block;width:96px;height:auto;margin-bottom:-6px}
